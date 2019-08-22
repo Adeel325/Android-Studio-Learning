@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,7 +24,11 @@ public class MainActivity extends AppCompatActivity {
         rollButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("Dice", "Ze button has been pressed!");
+                Log.d("Dicee", "Ze button has been pressed!");
+
+                Random randomNumberGenerator = new Random();
+                int number = randomNumberGenerator.nextInt(6);
+                Log.d("Dicee", "The random number is: "+ number);
             }
         });
     }
